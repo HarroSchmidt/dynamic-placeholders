@@ -44,7 +44,7 @@ namespace DynamicPlaceholders.Events
 
 		public void RemovedRenderingReference(Item item, string renderingReferenceUid)
 		{
-			var layoutFieldId = FieldIDs.LayoutField;
+			var layoutFieldId = Sitecore.ExperienceEditor.Utils.WebUtility.GetCurrentLayoutFieldId();
 			var document = new XmlDocument();
 
 			document.LoadXml(item[layoutFieldId]);
